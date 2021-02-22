@@ -13,7 +13,6 @@ const validateLoginInput = require('../../validation/login');
 router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
 router.post('/register', (req, res) => {
-    debugger
     // Check to make sure nobody has already registered with a duplicate email
     const { errors, isValid } = validateRegisterInput(req.body);
     if (!isValid) {
